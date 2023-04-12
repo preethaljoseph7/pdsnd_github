@@ -7,7 +7,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-# all the valid months and days for user inputs including all
+# all the valid months and days for user inputs
 month_list = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 day_list = ['all', 'sunday', 'monday', 'tuesday','wednesday', 'thursday', 'friday', 'saturday' ]
 
@@ -67,7 +67,7 @@ def input_val(user_ip, ip_type):
                 if ip_type == 'd':
                     print("Input is invalid. Please enter: sunday, monday, tuesday, wednesday, thursday, friday, saturday or all")
         except ValueError:
-            print("Wrong input entered. ")
+            print("Wrong input value entered. Please enter values as shown.")
     return user_entered_ip
 
 # function to load data for the city of user's city of choice
@@ -187,6 +187,10 @@ def user_stats(df, city):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+    
+    else:
+        print('Washington city does not have gender and birth information')
+        print('-'*40)
 
 
 def main():
