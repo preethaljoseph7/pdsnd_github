@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+# importing the bikeshare data for chicago, new york city and washington
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -10,7 +11,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 month_list = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 day_list = ['all', 'sunday', 'monday', 'tuesday','wednesday', 'thursday', 'friday', 'saturday' ]
 
-
+# fuction to display raw data
 def display_raw_data(df):
     i = 0
     while True: 
@@ -23,6 +24,7 @@ def display_raw_data(df):
         else:
             print('The input should be Y or N. Please re-enter.')
 
+# function to get user input
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -68,7 +70,7 @@ def input_val(user_ip, ip_type):
             print("Wrong input entered. ")
     return user_entered_ip
 
-
+# function to load data for the city of user's city of choice
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -107,7 +109,7 @@ def load_data(city, month, day):
         
     return df
 
-
+# function that computes time statitics 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -126,7 +128,7 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# function that computes station statistics 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -147,7 +149,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# function thtat computes trip statistics 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -163,7 +165,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# function that computes user statistics 
 def user_stats(df, city):
     """Displays statistics on bikeshare users."""
 
