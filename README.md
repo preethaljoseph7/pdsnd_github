@@ -7,7 +7,7 @@ The bikeshare.py project was created  on March 27, 2023 as a part of Udacity's 2
 Bikeshare Statistics for Chicago, Washington and New York City
 
 ### Description
-This project allows a user to view the bikeshare statistics for their city of choice - New York City, Washington and Chicago. The user has options to drill down to city, and time frame of their choice. 
+This project allows a user to view and explore the data related to U.S bike share systems and view the bikeshare statistics for their city of choice - New York City, Washington and Chicago. The user has options to drill down to city, and time frame of their choice. 
 Once the user makes their choice, they can view the following statistics: 
 - Time statistics: Displays statitics on the most frequent times of travel
 - Station statistics: Displays statistics on the most popular stations and trip
