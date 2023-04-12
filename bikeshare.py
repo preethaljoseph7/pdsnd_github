@@ -188,6 +188,7 @@ def user_stats(df, city):
     
     else:
         print('Washington city does not have gender and birth information')
+        print('-'*40)
 
 
 def main():
