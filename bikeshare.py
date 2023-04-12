@@ -65,7 +65,7 @@ def input_val(user_ip, ip_type):
                 if ip_type == 'd':
                     print("Input is invalid. Please enter: sunday, monday, tuesday, wednesday, thursday, friday, saturday or all")
         except ValueError:
-            print("Wrong input entered. ")
+            print("Wrong input value entered. Please enter values as shown.")
     return user_entered_ip
 
 
